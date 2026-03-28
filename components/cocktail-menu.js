@@ -35,19 +35,19 @@ class CocktailMenu extends HTMLElement {
         .cat:hover .cat-arrow{opacity:1;transform:translateY(0);color:var(--rouge)}
         .cat-apero::before{background:linear-gradient(to top,rgba(74,140,92,.15),transparent)}
         .cat-apero:hover .cat-num,.cat-apero:hover .cat-name,.cat-apero:hover .cat-price,.cat-apero:hover .cat-arrow{color:#4a8c5c}
-        .cat-apero:hover .cat-logo{filter:brightness(0) invert(1) sepia(1) saturate(3) hue-rotate(90deg)}
+        .cat-apero:hover .cat-logo{filter:none;opacity:1}
         .cat-roses::before{background:linear-gradient(to top,rgba(212,114,140,.15),transparent)}
         .cat-roses:hover .cat-num,.cat-roses:hover .cat-name,.cat-roses:hover .cat-price,.cat-roses:hover .cat-arrow{color:#d4728c}
-        .cat-roses:hover .cat-logo{filter:brightness(0) invert(1) sepia(1) saturate(3) hue-rotate(310deg)}
+        .cat-roses:hover .cat-logo{filter:none;opacity:1}
         .cat-blancs::before{background:linear-gradient(to top,rgba(201,168,76,.15),transparent)}
         .cat-blancs:hover .cat-num,.cat-blancs:hover .cat-name,.cat-blancs:hover .cat-price,.cat-blancs:hover .cat-arrow{color:#c9a84c}
-        .cat-blancs:hover .cat-logo{filter:brightness(0) invert(1) sepia(1) saturate(3) hue-rotate(15deg)}
+        .cat-blancs:hover .cat-logo{filter:none;opacity:1}
         .cat-rouges::before{background:linear-gradient(to top,rgba(138,32,32,.15),transparent)}
         .cat-rouges:hover .cat-num,.cat-rouges:hover .cat-name,.cat-rouges:hover .cat-price,.cat-rouges:hover .cat-arrow{color:#8a2020}
-        .cat-rouges:hover .cat-logo{filter:brightness(0) invert(1) sepia(1) saturate(5) hue-rotate(340deg) brightness(.7)}
+        .cat-rouges:hover .cat-logo{filter:none;opacity:1}
         .cat-digestifs::before{background:linear-gradient(to top,rgba(232,115,26,.15),transparent)}
         .cat-digestifs:hover .cat-num,.cat-digestifs:hover .cat-name,.cat-digestifs:hover .cat-price,.cat-digestifs:hover .cat-arrow{color:#e8731a}
-        .cat-digestifs:hover .cat-logo{filter:brightness(0) invert(1) sepia(1) saturate(5) hue-rotate(10deg) brightness(.9)}
+        .cat-digestifs:hover .cat-logo{filter:none;opacity:1}
         .menu-footer{text-align:center;margin-top:3rem}
         .menu-cta{display:inline-flex;align-items:center;gap:.6rem;font-family:'Bebas Neue',sans-serif;font-size:1rem;letter-spacing:.14em;color:var(--noir);background:var(--creme);padding:.8rem 2.2rem;border-radius:100px;text-decoration:none;transition:all .3s ease}
         .menu-cta:hover{background:var(--rouge);color:white;transform:translateY(-2px);box-shadow:0 8px 25px rgba(232,59,20,.25)}
