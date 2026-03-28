@@ -9,23 +9,7 @@ class CocktailMenu extends HTMLElement {
       <style>
         @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
         *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-        :host{
-          display:block;
-          
-  --creme:#FFF4E9;
-  --fond:#FAF9F6;
-  --noir:#2B2B2B;
-  --rouge:#E83B14;
-  --rouge-hover:#d63210;
-  --rouge-pale:#fde8e3;
-  --gris:#8a8580;
-  --gris-clair:#c4beb6;
-  --neg-color:#d5cec4;
-  --gris-ligne:rgba(255,255,255,.06);
-
-          font-family:'Montserrat',system-ui,sans-serif;
-          -webkit-font-smoothing:antialiased;
-        }
+        :host{display:block;--creme:#FFF4E9;--fond:#FAF9F6;--noir:#2B2B2B;--rouge:#E83B14;--gris:#8a8580;--gris-clair:#c4beb6;--gris-ligne:rgba(255,255,255,.06);font-family:'Montserrat',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
         .menu-section{padding:5rem 3rem;position:relative;overflow:hidden;background:var(--noir);color:var(--fond)}
         .menu-section::after{content:'';position:absolute;inset:0;opacity:.03;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:128px}
         .menu-inner{max-width:1100px;margin:0 auto;position:relative;z-index:2}
@@ -49,6 +33,16 @@ class CocktailMenu extends HTMLElement {
         .cat:hover .cat-price{color:var(--rouge)}
         .cat-arrow{font-size:.8rem;color:var(--gris);margin-top:.8rem;opacity:0;transform:translateY(5px);transition:all .3s ease .1s}
         .cat:hover .cat-arrow{opacity:1;transform:translateY(0);color:var(--rouge)}
+        .cat-apero::before{background:linear-gradient(to top,rgba(74,140,92,.15),transparent)}
+        .cat-apero:hover .cat-num,.cat-apero:hover .cat-name,.cat-apero:hover .cat-price,.cat-apero:hover .cat-arrow{color:#4a8c5c}
+        .cat-roses::before{background:linear-gradient(to top,rgba(212,114,140,.15),transparent)}
+        .cat-roses:hover .cat-num,.cat-roses:hover .cat-name,.cat-roses:hover .cat-price,.cat-roses:hover .cat-arrow{color:#d4728c}
+        .cat-blancs::before{background:linear-gradient(to top,rgba(201,168,76,.15),transparent)}
+        .cat-blancs:hover .cat-num,.cat-blancs:hover .cat-name,.cat-blancs:hover .cat-price,.cat-blancs:hover .cat-arrow{color:#c9a84c}
+        .cat-rouges::before{background:linear-gradient(to top,rgba(138,32,32,.15),transparent)}
+        .cat-rouges:hover .cat-num,.cat-rouges:hover .cat-name,.cat-rouges:hover .cat-price,.cat-rouges:hover .cat-arrow{color:#8a2020}
+        .cat-digestifs::before{background:linear-gradient(to top,rgba(232,115,26,.15),transparent)}
+        .cat-digestifs:hover .cat-num,.cat-digestifs:hover .cat-name,.cat-digestifs:hover .cat-price,.cat-digestifs:hover .cat-arrow{color:#e8731a}
         .menu-footer{text-align:center;margin-top:3rem}
         .menu-cta{display:inline-flex;align-items:center;gap:.6rem;font-family:'Bebas Neue',sans-serif;font-size:1rem;letter-spacing:.14em;color:var(--noir);background:var(--creme);padding:.8rem 2.2rem;border-radius:100px;text-decoration:none;transition:all .3s ease}
         .menu-cta:hover{background:var(--rouge);color:white;transform:translateY(-2px);box-shadow:0 8px 25px rgba(232,59,20,.25)}
@@ -61,16 +55,16 @@ class CocktailMenu extends HTMLElement {
       <section class="menu-section">
         <div class="menu-inner">
           <div class="menu-header">
-            <p class="menu-label">NOS SPÉCIALITÉS</p>
-            <h2 class="menu-title">QU’EST-CE QU’ON<br>TE SERT ?</h2>
-            <p class="menu-subtitle">Production créative à la carte. Choisis ta catégorie.</p>
+            <p class="menu-label">NOS SP\u00c9CIALIT\u00c9S</p>
+            <h2 class="menu-title">QU\u2019EST-CE QU\u2019ON<br>TE SERT ?</h2>
+            <p class="menu-subtitle">Production cr\u00e9ative \u00e0 la carte. Choisis ta cat\u00e9gorie.</p>
           </div>
           <div class="menu-grid">
-            <a href="https://www.cocktailmedia.ca/menu/apero" class="cat" target="_top"><span class="cat-num">01</span><img src="https://static.wixstatic.com/shapes/603d87_30652102cab24c9e83d9405fe124ee69.svg" alt="" class="cat-logo"><span class="cat-name">L’APÉRO</span><span class="cat-type">Infographie</span><span class="cat-price">À PARTIR DE 100$</span><span class="cat-arrow">→</span></a>
-            <a href="https://www.cocktailmedia.ca/menu/les-roses" class="cat" target="_top"><span class="cat-num">02</span><img src="https://static.wixstatic.com/shapes/603d87_a748d18eac8848e2b12f2731acfeaeb1.svg" alt="" class="cat-logo"><span class="cat-name">LES ROSÉS</span><span class="cat-type">Graphisme</span><span class="cat-price">À PARTIR DE 75$</span><span class="cat-arrow">→</span></a>
-            <a href="https://www.cocktailmedia.ca/menu/les-blancs" class="cat" target="_top"><span class="cat-num">03</span><img src="https://static.wixstatic.com/shapes/603d87_8c1734c96e2d46389e682f8b32278949.svg" alt="" class="cat-logo"><span class="cat-name">LES BLANCS</span><span class="cat-type">Vidéographie</span><span class="cat-price">À PARTIR DE 200$</span><span class="cat-arrow">→</span></a>
-            <a href="https://www.cocktailmedia.ca/menu/les-rouges" class="cat" target="_top"><span class="cat-num">04</span><img src="https://static.wixstatic.com/shapes/603d87_26a759fec56b434d996293b5902ea3e7.svg" alt="" class="cat-logo"><span class="cat-name">LES ROUGES</span><span class="cat-type">Photographie</span><span class="cat-price">À PARTIR DE 50$</span><span class="cat-arrow">→</span></a>
-            <a href="https://www.cocktailmedia.ca/menu/les-digestifs" class="cat" target="_top"><span class="cat-num">05</span><img src="https://static.wixstatic.com/shapes/603d87_2841476480cb44b48a46eb7ffe2c32bc.svg" alt="" class="cat-logo"><span class="cat-name">LES DIGESTIFS</span><span class="cat-type">Site web</span><span class="cat-price">À PARTIR DE 150$</span><span class="cat-arrow">→</span></a>
+            <a href="https://www.cocktailmedia.ca/menu/apero" class="cat cat-apero" target="_top"><span class="cat-num">01</span><img src="https://static.wixstatic.com/shapes/603d87_30652102cab24c9e83d9405fe124ee69.svg" alt="" class="cat-logo"><span class="cat-name">L\u2019AP\u00c9RO</span><span class="cat-type">Infographie</span><span class="cat-price">\u00c0 PARTIR DE 100$</span><span class="cat-arrow">\u2192</span></a>
+            <a href="https://www.cocktailmedia.ca/menu/les-roses" class="cat cat-roses" target="_top"><span class="cat-num">02</span><img src="https://static.wixstatic.com/shapes/603d87_a748d18eac8848e2b12f2731acfeaeb1.svg" alt="" class="cat-logo"><span class="cat-name">LES ROS\u00c9S</span><span class="cat-type">Graphisme</span><span class="cat-price">\u00c0 PARTIR DE 75$</span><span class="cat-arrow">\u2192</span></a>
+            <a href="https://www.cocktailmedia.ca/menu/les-blancs" class="cat cat-blancs" target="_top"><span class="cat-num">03</span><img src="https://static.wixstatic.com/shapes/603d87_8c1734c96e2d46389e682f8b32278949.svg" alt="" class="cat-logo"><span class="cat-name">LES BLANCS</span><span class="cat-type">Vid\u00e9ographie</span><span class="cat-price">\u00c0 PARTIR DE 200$</span><span class="cat-arrow">\u2192</span></a>
+            <a href="https://www.cocktailmedia.ca/menu/les-rouges" class="cat cat-rouges" target="_top"><span class="cat-num">04</span><img src="https://static.wixstatic.com/shapes/603d87_26a759fec56b434d996293b5902ea3e7.svg" alt="" class="cat-logo"><span class="cat-name">LES ROUGES</span><span class="cat-type">Photographie</span><span class="cat-price">\u00c0 PARTIR DE 50$</span><span class="cat-arrow">\u2192</span></a>
+            <a href="https://www.cocktailmedia.ca/menu/les-digestifs" class="cat cat-digestifs" target="_top"><span class="cat-num">05</span><img src="https://static.wixstatic.com/shapes/603d87_2841476480cb44b48a46eb7ffe2c32bc.svg" alt="" class="cat-logo"><span class="cat-name">LES DIGESTIFS</span><span class="cat-type">Site web</span><span class="cat-price">\u00c0 PARTIR DE 150$</span><span class="cat-arrow">\u2192</span></a>
           </div>
           <div class="menu-footer">
             <a href="https://www.cocktailmedia.ca/menu" class="menu-cta" target="_top">VOIR LE MENU COMPLET <img src="https://static.wixstatic.com/shapes/603d87_c9b09d330c54453fbf1b8edd389c9cfa.svg" alt="" class="menu-cta-coupe"></a>
