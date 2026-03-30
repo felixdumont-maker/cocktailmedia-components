@@ -51,7 +51,7 @@ class CocktailEquipe extends HTMLElement {
           </div>
           <div class="team">
             <div class="member">
-              <img src="https://static.wixstatic.com/media/603d87_b970aeee33b94a9db8d7fc52a1f4115a~mv2.jpg" alt="Félix Dumont" class="member-photo">
+              <img src="https://static.wixstatic.com/media/603d87_0e458c68edac45949a9b9f6e893d4db5~mv2.jpg" alt="Félix Dumont" class="member-photo">
               <h3 class="member-name">FÉLIX DUMONT</h3>
               <span class="member-role">FONDATEUR & PRODUCTION</span>
               <p class="member-desc">Photo, vidéo, graphisme, web — je travaille directement sur tes projets. Tu m’appelles, je comprends ton idée, je la produis.</p>
