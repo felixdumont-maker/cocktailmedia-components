@@ -15,20 +15,20 @@ class CocktailApropos extends HTMLElement {
 
         /* ============ HERO ============ */
         .hero{
-          min-height:50vh;display:flex;flex-direction:column;
+          display:flex;flex-direction:column;
           position:relative;overflow:hidden;background:var(--creme);
         }
         .hero-body{
-          flex:1;display:flex;flex-direction:column;justify-content:center;align-items:center;
-          padding:4rem 2rem 3rem;position:relative;z-index:2;text-align:center;
+          display:flex;flex-direction:column;justify-content:center;align-items:center;
+          padding:5rem 2rem 4rem;position:relative;z-index:2;text-align:center;
         }
         .bg-word{
           position:absolute;font-family:'Bebas Neue',sans-serif;letter-spacing:.04em;color:var(--neg-color);
           text-decoration:line-through;text-decoration-color:var(--rouge);
           opacity:0;z-index:1;pointer-events:none;white-space:nowrap;user-select:none;
         }
-        .bg-w1{font-size:clamp(5rem,18vw,15rem);text-decoration-thickness:clamp(3px,.5vw,8px);top:8%;left:-2%;transform:rotate(-5deg);animation:bgWordIn .8s ease-out .2s forwards}
-        .bg-w2{font-size:clamp(4rem,14vw,12rem);text-decoration-thickness:clamp(3px,.4vw,7px);bottom:10%;right:-1%;transform:rotate(3deg);animation:bgWordIn .8s ease-out .5s forwards}
+        .bg-w1{font-size:clamp(5rem,18vw,15rem);text-decoration-thickness:clamp(3px,.5vw,8px);top:50%;left:-2%;transform:rotate(-5deg) translateY(-80%);animation:bgWordIn .8s ease-out .2s forwards}
+        .bg-w2{font-size:clamp(4rem,14vw,12rem);text-decoration-thickness:clamp(3px,.4vw,7px);top:50%;right:-1%;transform:rotate(3deg) translateY(-20%);animation:bgWordIn .8s ease-out .5s forwards}
         .hero-logo{height:70px;width:auto;margin-bottom:1.2rem;position:relative;z-index:5;opacity:0;animation:fadeUp .6s ease-out .4s forwards}
         .hero-label{font-family:'Bebas Neue',sans-serif;font-size:.75rem;letter-spacing:.4em;color:var(--rouge);position:relative;z-index:5;margin-bottom:.8rem;opacity:0;animation:fadeUp .6s ease-out .6s forwards}
         .hero-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(3rem,9vw,7rem);line-height:.9;letter-spacing:.02em;color:var(--noir);margin-bottom:1rem;position:relative;z-index:5;opacity:0;animation:punchIn .7s ease-out .8s forwards}
@@ -107,14 +107,13 @@ class CocktailApropos extends HTMLElement {
 
         /* ============ RESPONSIVE ============ */
         @media(max-width:768px){
-          .hero{min-height:45vh}
-          .hero-body{padding:3rem 1.5rem 2.5rem}
-          .bg-w1{font-size:4rem;top:5%}.bg-w2{font-size:3rem;bottom:8%}
+          .hero-body{padding:4rem 1.5rem 3rem}
+          .bg-w1{font-size:4rem}.bg-w2{font-size:3rem}
           .team{grid-template-columns:1fr;gap:2.5rem}
           .points{grid-template-columns:1fr;gap:2rem}
         }
         @media(max-width:480px){
-          .hero-body{padding:2.5rem 1.2rem 2rem}
+          .hero-body{padding:3rem 1.2rem 2.5rem}
           .bg-w1{font-size:3rem}.bg-w2{font-size:2.2rem}
           .histoire{padding:3rem 1.2rem}
           .equipe{padding:3rem 1.2rem}
