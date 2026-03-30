@@ -10,15 +10,15 @@ class CocktailFaq extends HTMLElement {
       { q: "C\u2019est quoi la diff\u00e9rence avec une agence\u00a0?", a: "Cocktail M\u00e9dia, c\u2019est une usine cr\u00e9ative \u2014 tu commandes directement le service que tu veux, au prix affich\u00e9, et c\u2019est la m\u00eame personne qui te r\u00e9pond et qui produit ton projet. Pas de d\u00e9partement, pas de charg\u00e9 de compte, pas de processus compliqu\u00e9. C\u2019est direct, rapide et humain." },
       { q: "Est-ce qu\u2019il y a des frais cach\u00e9s\u00a0?", a: "Non. Le prix affich\u00e9 sur le menu, c\u2019est le prix que tu paies. Les seuls frais suppl\u00e9mentaires possibles sont les extras que tu choisis toi-m\u00eame (livraison express, revisites suppl\u00e9mentaires, etc.)." }
     ];
- 
+
     const schemaData = { "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })) };
- 
+
     const faqHTML = faqs.map((f, i) => `
       <details class="faq-item" ${i === 0 ? 'open' : ''}>
         <summary class="faq-question"><span class="faq-q-text">${f.q}</span><span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary>
         <div class="faq-answer"><p>${f.a}</p></div>
       </details>`).join('');
- 
+
     this.shadowRoot.innerHTML = `
       <style>
         @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
